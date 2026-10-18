@@ -16,7 +16,7 @@
 - `.githooks/publish_check.py`: verbatim shared validator from `kodi.addons/tools/publish_check.py`.
 - `.githooks/pre-push`: shared Starlight hook. Enable with `git config core.hooksPath .githooks`.
 - Follow `kodi.addons/VERSIONING.md` for future releases. Change the version and news together.
-- Choose the source license with the owner before public release. No license grant is assumed.
+- License: GPL-2.0-or-later (`LICENSE.txt`), as required by the GPL Kodi dev-kit.
 
 ## Geometry and cost
 

@@ -9,6 +9,7 @@
     <summary lang="en_GB">Gold-to-frost radial spectrum for Starlight</summary>
     <description lang="en_GB">Audio-reactive radial bars and a soft glow surround the Starlight album cover. The skin supplies the cover and the paused dotted ring.</description>
     <platform>linux</platform>
+    <license>GPL-2.0-or-later</license>
     <assets><icon>resources/icon.png</icon></assets>
     <news>1.0.0
 Initial GLES radial spectrum for Kodi 21 and the Starlight music stage.</news>
