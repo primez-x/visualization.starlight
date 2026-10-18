@@ -1,0 +1,4 @@
+{
+  "branch": "main",
+  "tests": [["python3", "tests/run.py"]]
+}
