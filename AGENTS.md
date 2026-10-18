@@ -68,7 +68,7 @@ The toolchain uses a 32-bit hard-float ABI despite the `armv8a` prefix and the b
 The source compiles for ARMv7 NEON. CoreELEC startup objects carry ARMv8 attributes.
 Validate the resulting package on the target CoreELEC image. Generic ARMv7 distributions remain unverified.
 
-`main` holds the source. The `armv7` branch holds the installable add-on (`addon.xml`, `visualization.starlight.so`, `resources/`) that `kodi.addons` publishes.
+`main` holds the source. The `armv7` branch holds the installable add-on (`addon.xml`, `LICENSE.txt`, `visualization.starlight.so`, `resources/`) that `kodi.addons` publishes.
 The builder cannot compile C++, so every release stages a fresh binary on `armv7`:
 
 ```sh

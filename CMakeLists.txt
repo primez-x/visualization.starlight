@@ -24,7 +24,7 @@ if(STARLIGHT_BUILD_ADDON)
   target_link_libraries(visualization.starlight PRIVATE starlight_spectrum ${GLES_LIBRARY} Threads::Threads)
   target_link_options(visualization.starlight PRIVATE -Wl,--no-undefined)
   install(TARGETS visualization.starlight LIBRARY DESTINATION visualization.starlight)
-  install(FILES addon.xml DESTINATION visualization.starlight)
+  install(FILES addon.xml LICENSE.txt DESTINATION visualization.starlight)
   install(DIRECTORY resources DESTINATION visualization.starlight)
 endif()
 
