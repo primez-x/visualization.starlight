@@ -146,7 +146,13 @@ public:
     m_display.fill(0);
     m_frame = Clock::now();
     m_audio = m_frame;
-    return m_spectrum.Reset(channels, sampleRate);
+    m_started = m_spectrum.Reset(channels, sampleRate);
+    return m_started;
+  }
+
+  void Stop() override
+  {
+    m_started = false;
   }
 
   void AudioData(const float* data, size_t count) override
@@ -158,7 +164,7 @@ public:
 
   bool IsDirty() override
   {
-    return Clock::now() - m_frame >= std::chrono::milliseconds(33);
+    return m_started && Clock::now() - m_frame >= std::chrono::milliseconds(33);
   }
 
   void Render() override
@@ -273,6 +279,8 @@ private:
   Clock::time_point m_frame{}, m_audio{};
   GLuint m_program = 0, m_buffer = 0;
   bool m_attempted = false;
+  // Kodi calls Start, Stop, IsDirty, and Render on the GUI thread.
+  bool m_started = false;
 };
 
 class Addon final : public kodi::addon::CAddonBase
